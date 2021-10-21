@@ -1,7 +1,7 @@
 function traerInformacion(){
 
     $.ajax({
-        url:"http://localhost:8080/api/Score/all",
+        url:"http://129.151.121.62:8080/api/Score/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -50,7 +50,7 @@ function guardarInformacion(){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://localhost:8080/api/Score/save",
+        url:"http://129.151.121.62:8080/api/Score/save",
         type:"POST",
         data:dataToSend,
         datatype:"JSON",
@@ -82,7 +82,7 @@ function editarInformacion(){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://localhost:8080/api/Score/update",
+        url:"http://129.151.121.62:8080/api/Score/update",
         type:"PUT",
         data:dataToSend,
         contentType:"application/JSON",
@@ -103,6 +103,7 @@ function editarInformacion(){
 
 }
 
+
 function borrarElemento(idElemento){
 
     let myData={
@@ -111,7 +112,7 @@ function borrarElemento(idElemento){
 
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://localhost:8080/api/Score/{i}",
+        url:"http://129.151.121.62:8080/api/Score/{i}",
         type:"DELETE",
         data:dataToSend,
         datatype:"JSON",
